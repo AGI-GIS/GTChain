@@ -1,0 +1,37 @@
+[
+    {
+        "Tool_Name":"raster2vector",
+        "Function":"Converts raster data to vector format.", 
+        "Input":"Path of the input raster file.", 
+        "Output":"Path of the output vector file.",
+        "Demo":"I need to convert the land cover raster located at ./land_cover.tif into a vector format for detailed feature analysis."
+    },
+    {
+        "Tool_Name": "Resample",
+        "Function": "Resamples a raster file to a different resolution or grid size.",
+        "Input": "Path of the input raster file, new resolution.",
+        "Output": "Path of the resampled raster file.",
+        "Demo": "Please resample the elevation data stored in ./elevation.tif to a higher resolution for a more detailed topographical analysis."
+    },
+    {
+        "Tool_Name": "NDVI",
+        "Function": "Calculates the Normalized Difference Vegetation Index (NDVI) from satellite imagery, which indicates vegetation health.",
+        "Input": "Paths of the input raster file.",
+        "Output": "Path of the output NDVI raster file.",
+        "Demo": "Please calculate the NDVI for the agricultural area using the image located at ./ndvi.tif."
+    },
+    {
+        "Tool_Name": "Summary Statistics",
+        "Function": "Computes summary statistics such as mean, median, mode, standard deviation, and more for the specified data field within a dataset.",
+        "Input": "Path of the input data file, field name for which statistics are to be calculated.",
+        "Output": "Path of the output table file containing the summary statistics.",
+        "Demo": "I need summary statistics for the field 'population' from the data file located at ./census_data.shp to analyze demographic trends."
+    },
+    {
+        "Tool_Name": "Mosaic",
+        "Function": "Merges multiple existing raster datasets into an existing raster dataset.",
+        "Input": "Paths of the raster datasets to be merged.",
+        "Output": "Path of the output raster file containing the merged data.",
+        "Demo": "Please merge the land use raster at ./land_use.tif and the elevation raster at ./elevation.tif to analyze how land use varies with elevation in the region."
+    }
+]

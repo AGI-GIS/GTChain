@@ -1,0 +1,190 @@
+[
+    {
+        "Tool_Name":"Buffer",
+        "Function":"Creates a buffer zone around a shapefile.",
+        "Input":"Shapefile path, buffer radius.",
+        "Output":"Path of the buffered shapefile.",
+        "Demo":"Please help me find areas that are located within a maximum distance of 500 meters from subway stations. The file of subway stations is located at ./subway_station.shp." 
+    },
+    {
+        "Tool_Name":"Union",
+        "Function":"Computes a geometric union of the input shapefiles.",
+         "Input":"Paths of input shapefiles.", 
+         "Output":"Path of the union shapefile.",
+         "Demo":"I have the river distribution vector data from regions A and B, respectively. Please combine them for me so that I can analyze them from a global perspective. The river files for regions A and B are located at ./river_a.shp and ./river_b.shp, respectively. "
+    },
+    {
+        "Tool_Name":"Intersect",
+        "Function":"Finds the intersection (overlap) between two shapefiles.",
+         "Input":"Paths of two input shapefiles.", 
+         "Output":"Path of the intersection shapefile.",
+         "Demo":"I'm currently searching for a rental property, and I prefer it to be located within District A and commercial districts. The shapefile for District A can be found at ./region_A.shp, and the file of commercial districts is located at ./commercial_district.shp. "
+    },
+    {
+        "Tool_Name":"Clip",
+        "Function":"Extracts objects from shapefile A that are within the extent of shapefile B.", 
+        "Input":"Paths of shapefile A and shapefile B.", 
+        "Output":"Path of the clipped shapefile.",
+        "Demo":"I'm going on a vacation trip tomorrow night and need to find a hotel. I'd like to find a hotel with an elegant environment and fresh air, preferably within a mountainous area. You can find hotel data at ./hotel.shp, and the file of the mountainous area is at ./mountainous_area.shp."
+    },
+    {
+        "Tool_Name":"Erase",
+        "Function":"Removes objects from shapefile A that overlap with shapefile B.", 
+        "Input":"Paths of shapefile A and shapefile B.", 
+        "Output":"Path of the shapefile with overlapping objects removed.",
+        "Demo":"I need to find a piece of land to build a factory in City A, but the factory cannot be built in a forested area. The data for City A is stored in ./city_a.shp, and the data for the forest is stored in ./forest.shp."
+    },
+    {
+        "Tool_Name":"Select",
+        "Function":"Extracts objects from a shapefile based on a SQL expression.", 
+        "Input":"Path of the shapefile, SQL expression." ,
+        "Output":"Path of the output shapefile with selected objects.",
+        "Demo":"Please help me find neighborhoods in City A with a population exceeding 5000. The data for the neighborhoods is stored in ./city_residential.shp, and the field name for population in this data is 'population'."
+    },
+    {
+        "Tool_Name":"Near",
+        "Function":"Calculates distance and proximity information between objects in a input shapefile and the closest objects in another reference shapefile.", 
+        "Input":"Paths of the input shapefile and the reference shapefile.", 
+        "Output":"Path of the shapefile containing distance information.",
+        "Demo":"Please help me find the nearest hospital to each residential building and calculate the distance to it. The data for the residential buildings is stored in ./buildings.shp, and the data for hospitals is stored in ./hospital.shp."
+    },
+    {
+        "Tool_Name":"Frequency",
+        "Function":"Analyzes a table for unique field values and their frequency of occurrence.",
+        "Input":"Path of the input table or shapefile, a field to analyze.", 
+        "Output": "Path of the output table with unique field values and their counts.",
+        "Demo":"I want to analyze the quantity of hotels of different star ratings in City A. The hotel data is stored in ./hotels.shp, and the field for star ratings is 'Hotel_Star_Rating'."
+    },
+
+    {
+        "Tool_Name":"Get POI By Keywords",
+        "Function":"Gets urban POI data with specific category in a city of China online.",
+         "Input":"city name, category name.", 
+         "Output":"Path of the obtained POI shapefile.",
+         "Demo":"Retrieve POI data of restaurants in Wuhan."
+    },
+    {
+        "Tool_Name":"Get POI By Rectangle",
+        "Function":"Gets urban POI data within a rectangle area of China online.", 
+        "Input":"A comma-separated quadruple string, representing two longitude ranges x1, x2 enclosed in a rectangle, and two latitude ranges y1, y2 enclosed in a rectangle",
+         "Output":"Path of the obtained POI shapefile.",
+         "Demo":"I need POI data for the rectangular area with a longitude range of 116.260 to 116.490 and a latitude range of 39.820 to 39.990."
+    },
+    {
+        "Tool_Name":"Get Road Network By Rectangle",
+        "Function":"Gets road network data within a rectangle area online.",
+         "Input":"A comma-separated quadruple string, representing two longitude ranges x1, x2 enclosed in a rectangle, and two latitude ranges y1, y2 enclosed in a rectangle.",
+          "Output":"Path of the obtained road network shapefile.",
+          "Demo":"Please help me download road network data within the rectangular area with a longitude range of -8.7 to -8.519847 and a latitude range of 41.064999 to 41.189018."
+    },
+    {
+        "Tool_Name":"Get Remote Sensing Image",
+        "Function":"Gets remote sensing image data within a time span in a city online." ,
+        "Input": "Province, city, start time, end time." ,
+        "Output":"Path of the directory to store remote sensing image data.",
+        "Demo":"Download remote sensing images of Wuhan City. Hubei Province from February 10, 2015 to February 20, 2015."
+    },
+    {
+        "Tool_Name":"Obtain one POI",
+        "Function":"Get a shapefile containing a specific POI place in China online.",
+        "Input":"Specific POI name.", 
+        "Output":"Path of the obtained POI shapefile.",
+        "Demo":"Do you know the park called 'Zhongshan Park'?"
+    },
+    {
+        "Tool_Name":"Create Thiessen polygons",
+        "Function":"Creates Thiessen polygons from a point shapefile. Each Thiessen polygon contains only a single point. Any location within a Thiessen polygon is closer to its associated point than to any other points.", "Input":"Path of a point shapefile.", 
+        "Output":"Path of the Thiessen polygon shapefile.",
+        "Demo":"I want to analyze the service area for each hospital, as residents typically visit the nearest hospital to them. The hospital data is stored in ./hospital.shp."
+    },
+    {
+        "Tool_Name":"Point Distance",
+        "Function":"Determines the distances from input point shapefile to all points in the near point shapefile.", "Input":"Paths of the input point shapefile and near point shapefile.",
+         "Output":"The path of the table containing the distance information between each point in input point shapefile and each point in the near point shapefile.",
+         "Demo":"I want to study the accessibility of library resources to residents. Please help me calculate the distance from each residential community to all libraries. The data for residential communities is stored in ./residential.shp, and the data for libraries is stored in ./library.shp."
+    },
+    {
+        "Tool_Name":"Kriging",
+        "Function":"Interpolates a raster surface from points using kriging.", 
+        "Input":"Path of the input point shapefile, field.", 
+        "Output":"Path of the output raster surface.",
+        "Demo":"I would like to analyze the distribution of rainfall in City A. I currently have rainfall data collected from multiple meteorological stations in the city. The data is stored in ./rain.shp, and the field representing rainfall volume in this dataset is labeled 'volume'."
+    },
+    {
+        "Tool_Name":"Kernel Density",
+        "Function":"Calculates a magnitude-per-unit area from point or polyline shapefile using a kernel function to fit a smoothly tapered surface to each point or polyline.",
+         "Input":"Path of the input shapefile, bandwidth.",
+         "Output":"Path of the output raster showing density.",
+         "Demo":"I want to analyze the distribution of crime density in the city. The crime data is stored in point format in the ./crime.shp file. For the analysis, I will use a specific bandwidth of 1000 meters to capture the spatial variation of crimes across the city."
+    },
+    {
+        "Tool_Name":"Extract Values to Points",
+        "Function":"Extracts the cell values of a raster based on a point shapefile and records the values in the attribute table of an output point shapefile.", 
+        "Input":"Paths of a point shapefile and raster file.", 
+        "Output":"Path of the output point shapefile.",
+        "Demo":"Please help me obtain the temperature values for the points of interest. The point location data is stored in ./point.shp, and the temperature raster data is in ./temperature.tif."
+    },
+    {
+        "Tool_Name":"Point Clustering",
+        "Function":"Groups points in a point shapefile based on their spatial distance.",
+         "Input":"Path of a point shapefile, group number.", 
+         "Output":"Path of the output point shapefile with group information in attribute table.",
+         "Demo":"I would like to analyze whether there is a significant spatial clustering phenomenon of commercial facilities in area A. Please help me cluster these commercial facilities into four groups based on their spatial distribution. The commercial facilities are stored in ./commercial_facilities.shp."
+    },
+    {
+        "Tool_Name":"Slope",
+        "Function":"Identifies the slope (gradient or steepness) from each cell of a raster.", 
+        "Input":"Path of a raster file.", 
+        "Output":"Path of the output slope raster file.",
+        "Demo":"I need the slope distribution data for area A to assist me in selecting a facility location. The elevation data for area A is stored in ./elevation_a.img."
+    },
+    {
+        "Tool_Name":"Aspect",
+        "Function":"Derives the aspect from each cell of a raster surface. The aspect identifies the compass direction that the downhill slope faces for each location.", 
+        "Input":"Path of a raster file.", 
+        "Output":"Path of the output aspect raster file.",
+        "Demo":"Compute the aspect map for City B, with elevation data stored in ./elevation_B.tif."
+    },
+    {
+        "Tool_Name":"Visualization",
+        "Function":"Visualizing a vector dataset as an image.",
+        "Input":"Path of a shapefile.", 
+        "Output":"Path of the output image.",
+        "Demo":"Please assist me in converting this vector data into an image, with the data stored in ./data.shp."
+    },
+    {
+        "Tool_Name":"Clip Raster",
+        "Function":"Clip a input raster data according to the shape of another clip raster or shapefile data." ,
+        "Input":"Paths of input raster and clip raster (or clip shapefile).", 
+        "Output": "Path of the output clipped raster.",
+        "Demo":"I would like to obtain land use classification data for Wuhan city. The land use classification data for Hubei province is stored in ./hubei_landuse.img, and the administrative boundary data for Wuhan city is located at ./wuhan.shp."
+    },
+    {
+        "Tool_Name":"Road Network Extraction From Remote Sensing Image",
+        "Function":"Extracts road network from input remote sensing image.", 
+        "Input":"Path of the input remote sensing image data.", 
+        "Output":"Path of the output road network shapefile.",
+        "Demo":"I need road network data for region A for spatial analysis and I have the remote sensing image data for this area stored in ./rsimage.tif."
+    },
+    {
+        "Tool_Name":"Land Use Classification Based on Remote Sensing Image",
+        "Function":"Categorizes different types of land cover in an area based on input remote sensing data.", 
+        "Input":"Path of the input remote sensing image data.", 
+        "Output":"Path of the outpu land use raster file.",
+        "Demo":"Please help me to generate land use image of area B based on the remote sensing image ./RSI_B.tif."
+    },
+    {
+        "Tool_Name":"Water Extraction From Remote Sensing Image",
+        "Function":"Identifies water bodies, such as rivers, lakes, reservoirs, and ponds, from input remote sensing image data.", 
+        "Input":"Path of the input remote sensing image data.", 
+        "Output":"Path of the output water raster file.",
+        "Demo":"I have remote sensing image data of Beijing city in 2020, named ./bj_rs_2020.tif. Please help me extract the distribution of water bodies from it."
+    },
+    {
+        "Tool_Name":"Building Extraction From Remote Sensing Image",
+        "Function":"Extracts buildings from input remote sensing image.", 
+        "Input":"Path of the input remote sensing image data.", 
+        "Output":"Path of the output building shapefile.",
+        "Demo":"I want to obtain the approximate distribution of buildings based on remote sensing image data of region A, named ./rs_a.tif."
+    }
+]
